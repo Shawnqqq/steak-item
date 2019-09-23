@@ -21,4 +21,10 @@ body,html{
   width: 100%;
   height: 100%;
 }
+.about .simplebar-scrollbar:before{
+  background-color: rgba(255, 255, 255, 0.637);
+}
+.development .simplebar-scrollbar:before{
+  background-color:#fff;
+}
 </style>

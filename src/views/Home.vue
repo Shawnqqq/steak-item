@@ -10,6 +10,10 @@
       <div class="section"><banner/></div>
       <div class="section"><about/></div>
       <div class="section"><development/></div>
+      <div class="section"><news/></div>
+      <div class="section"><join/></div>
+      <div class="section"><whistleblower/></div>
+      <div class="section"><contact/></div>
     </full-page>
   </div>
 </template>
@@ -19,13 +23,21 @@
 import banner from "@/components/banner.vue";
 import about from "@/components/about.vue";
 import development from "@/components/development.vue";
+import news from "@/components/news.vue";
+import join from "@/components/join.vue"
+import whistleblower from "@/components/whistleblower.vue"
+import contact from "@/components/contact.vue"
 
 export default {
   name: "home",
   components: {
     banner,
     about,
-    development
+    development,
+    news,
+    join,
+    whistleblower,
+    contact
   },
   data(){
     return{
