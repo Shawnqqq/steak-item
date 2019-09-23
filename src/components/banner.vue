@@ -3,7 +3,7 @@
     <div class="head-section">
       <img src="@/assets/logo.gif" class="head-logo">
       <div class="head-nav">
-        <nav class="nav">
+        <nav class="nav" id="nav-menu">
           <a href="javascript:;">关于实地</a>
           <a href="javascript:;">地产开发</a>
           <a href="javascript:;">最新消息</a>

@@ -3,20 +3,36 @@
     <div class="video-bg">
       <video class="video-content" muted="muted" loop='loop' autoplay="autoplay" src="@/assets/videobg.mp4"></video>
     </div>
-    <div class="home">
-      <banner/>
-    </div>
+    <full-page class="home" 
+      ref="fullpage"
+      :options="options"
+      id="fullpage">
+      <div class="section"><banner/></div>
+      <div class="section"><about/></div>
+      <div class="section"><development/></div>
+    </full-page>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import banner from "@/components/banner.vue";
+import about from "@/components/about.vue";
+import development from "@/components/development.vue";
 
 export default {
   name: "home",
   components: {
-    banner
+    banner,
+    about,
+    development
+  },
+  data(){
+    return{
+      options:{
+        licenseKey: "4F375E3E-7D814D7F-B82954BA-31DC667F"
+      }
+    }
   }
 };
 </script>
@@ -29,6 +45,7 @@ export default {
   .video-bg{
   width: 100%;
   height: 100%;
+  position: absolute;
     .video-content{
       position: fixed;
       background-size: cover;
