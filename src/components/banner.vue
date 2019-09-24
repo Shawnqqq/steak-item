@@ -3,19 +3,19 @@
     <div class="head-section">
       <img src="@/assets/logo.gif" class="head-logo">
       <div class="head-nav">
-        <nav class="nav" id="nav-menu">
-          <a href="javascript:;">关于实地</a>
-          <a href="javascript:;">地产开发</a>
-          <a href="javascript:;">最新消息</a>
-          <a href="javascript:;">加入实地</a>
-          <a href="javascript:;">廉洁举报</a>
-          <a href="javascript:;">联系我们</a>
-        </nav>
+        <ul class="nav" id="nav-menu">
+          <a data-menuanchor="about" href="/#about">关于实地</a>
+          <a data-menuanchor="development" href="/#development">地产开发</a>
+          <a data-menuanchor="news" href="/#news">最新消息</a>
+          <a data-menuanchor="join" href="/#join">加入实地</a>
+          <a data-menuanchor="whistleblower" href="/#whistleblower">廉洁举报</a>
+          <a data-menuanchor="contact" href="/#contact">联系我们</a>
+        </ul>
         <div class="head-btn">
-          <div class="btn-language">
+          <!-- <div class="btn-language">
             <div class="btn-en">EN</div>
             <div class="btn-cn">CN</div>
-          </div>
+          </div> -->
           <img src="@/assets/menu.png" class="head-menu">
         </div>
       </div>
@@ -154,6 +154,7 @@ export default {
         width: 0;
         bottom: 0;
         position: absolute;
+        opacity: 0.3;
         animation: lineardashcenter 1s 3s linear forwards;
         transform-origin: center;
       }
@@ -209,17 +210,19 @@ export default {
       .grid-border-1{
         position: absolute;
         top: 24%;
+        opacity: 0.9;
         animation: linearh1 1s 4s linear forwards;
       }
       .grid-border-2{
         position: absolute;
-        top: 50%;
-        opacity: 0.3;
+        top: 51%;
+        opacity: 0.5;
         animation: linearh2 1s 4s linear forwards;
       }
       .grid-border-3{
         top: 75%;
         position: absolute;
+        opacity: 0.5;
         animation: linearh3 1s 4s linear forwards;
       }
     }
@@ -457,7 +460,7 @@ export default {
         padding: 0;
       }
       .cross-item-4{
-        top: 50%;
+        top: 52%;
         left: 25%;
         transform: translate(-5px,-17px);
         position: absolute;
@@ -481,7 +484,7 @@ export default {
         padding: 0;
       }
       .cross-item-7{
-        top: 50%;
+        top: 52%;
         left: 50%;
         transform: translate(-5px,-17px);
         position: absolute;
@@ -521,9 +524,9 @@ export default {
         padding: 0;
       }
       .cross-item-12{
-        top: 50%;
-        right: 24.5%;
-        transform: translate(-5px,-17px);
+        top: 52%;
+        right: 25%;
+        transform: translate(4px, -18px);
         position: absolute;
         margin: 0;
         padding: 0;
@@ -539,7 +542,7 @@ export default {
       .cross-item-14{
         top: 25%;
         right: 12%;
-        transform: translate(-5px,-17px);
+        transform: translate(0px,-17px);
         position: absolute;
         margin: 0;
         padding: 0;

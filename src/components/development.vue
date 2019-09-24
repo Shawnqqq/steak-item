@@ -11,6 +11,9 @@
           <div class="deve-item-btn">
             <div :class="'btn-push-'+index" v-for="index in 4" :key="index">+</div>
             <div class="btn-box">EXPLORE</div>
+            <div class="box-line-top"></div>
+            <div class="box-line-left"></div>
+            <div class="box-line-right"></div>
           </div>
         </div>
       </div>
@@ -24,6 +27,9 @@
           <div class="deve-item-btn">
             <div :class="'btn-push-'+index" v-for="index in 4" :key="index">+</div>
             <div class="btn-box">EXPLORE</div>
+            <div class="box-line-top"></div>
+            <div class="box-line-left"></div>
+            <div class="box-line-right"></div>
           </div>
         </div>
       </div>
@@ -137,19 +143,21 @@ export default {
             color: #fff;
             position: absolute;
             left: -4px;
-            top: 2px;
+            bottom: -10px;
+            z-index: 2 !important;
             transition: transform 0.7s ease-in-out;
           }
           .btn-push-4{
             color: #fff;
             position: absolute;
             right: -4px;
-            top: 2px;
+            bottom: -10px;
+            z-index: 2 !important;
             transition: transform 0.7s ease-in-out;
           }
           .btn-box{
             opacity: 0;
-            z-index: 2;
+            z-index: 1;
             font-size: 14px;
             margin-top: -22px;
             float: right;
@@ -162,10 +170,40 @@ export default {
             cursor: pointer;
             font-family: "DIN-Regular";
             letter-spacing: 3px;
-            border: 1px solid #ffffff60;
+            border-bottom: 1px solid #ffffff;
             text-align: center;
             line-height: 21px;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.3s ease-in-out;
+          }
+          .box-line-top{
+            width: 0px;
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            bottom: 33px;
+            right: 0;
+            transition: width 1.6s;
+            opacity: 0.7;
+          }
+          .box-line-left{
+            width: 1px;
+            height: 0px;
+            background: #fff;
+            position: absolute;
+            left:0px;
+            bottom: 0px;
+            transition: height 2.3s;
+            opacity: 0.7;
+          }
+          .box-line-right{
+            width: 1px;
+            height: 0px;
+            background: #fff;
+            position: absolute;
+            right:0px;
+            top: -21px;
+            transition: height 2s;
+            opacity: 0.7;
           }
           .btn-box:hover{
             background-color: rgba(179, 175, 175, 0.397);
@@ -177,19 +215,28 @@ export default {
           background: rgba(0,0,0,0.35);
         }
         .btn-push-1{
-          transform: rotate(180deg)
+          transform: rotate(360deg)
         }
         .btn-push-2{
-          transform: rotate(180deg)
+          transform: rotate(360deg)
         }
         .btn-push-3{
-          transform: translateY(-32px)
+          transform: translateY(-33px) rotate(360deg);
         }
         .btn-push-4{
-          transform: translateY(-32px)
+          transform: translateY(-33px) rotate(360deg);
         }
         .btn-box{
           opacity:1;
+        }
+        .box-line-top{
+          width: 125px;
+        }
+        .box-line-left{
+          height: 33px;
+        }
+        .box-line-right{
+          height: 33px;
         }
       }
     }

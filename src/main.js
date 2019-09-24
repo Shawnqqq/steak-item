@@ -5,6 +5,10 @@ import router from "./router";
 import VueFullPage from 'vue-fullpage.js'
 Vue.use(VueFullPage);
 
+//轮播图
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
+Vue.use(VueAwesomeSwiper);
 
 Vue.config.productionTip = false;
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <div class="swiper-item">
+  <swiper class="about" :options="swiperOption" ref="mySwiper">
+    <swiper-slide class="swiper-item">
       <div class="item-left">
         <div class="item-left-en">PROFILE</div>
         <div class="item-left-cn">项目简介</div>
@@ -39,8 +39,88 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </swiper-slide>
+    <swiper-slide class="swiper-item">
+      <div class="item-left">
+        <div class="item-left-en">MILESTONES</div>
+        <div class="item-left-cn">里程碑</div>
+      </div>
+      <div class="item-right">
+        <simplebar class="milestones-text">
+          <strong>萌芽，生长的开始..</strong>
+          <p>2006年,一股地产新兴势力在华南地区悄然崛起，实地集团正式成立。</p>
+          <strong>扎根，能量的注入</strong>
+          <p>2006年，实地集团在中山启动第一个综合社区项目——实地•中山璟湖城。该项目获当地“最受欢迎楼盘”、“最具魅力园林社区”等奖项，为集团赢得良好开局及市场声誉。</p>
+          <strong>生长，全面的发展</strong>
+          <p>实地集团发展迅猛，一路高歌、不断壮大，陆续推出实地•遵义蔷薇国际、实地•六盘水紫藤庄园等高品质地产项目，实现以广州为总部，辐射周边省份的跨越式发展。</p>
+          <strong>成熟，崭新的高度</strong>
+          <p>2013年，实地集团发展日益成熟，战略触角延伸至华东等地区。实地•无锡玫瑰庄园等项目的落地标志着实地集团吹响进发中国东部房地产市场的号角，并向更高的目标迈进。</p>
+          <strong>回归，荣耀的释放</strong>
+          <p>2015年，实地集团回归一线城市。在广州筑造的百万方生活综合体——实地•广州常春藤项目，拉开了集团新一轮战略布局的序幕。2017年，实地进入第二个十年，旗下项目多点齐发，打开全国发展的新格局。</p>
+          <strong>绽放，力量的迸发</strong>
+          <p>2018年，实地集团加速拓展，新布局十余个中国潜力城市，并正式提出构建SLS（Smart Life System）智慧人居系统的战略设想，通过建立统一的云平台，与用户保持高频次的互动，不断迭代产品、优化服务，构建覆盖家居、社区、城市的智慧生活版图。</p>
+        </simplebar>
+      </div>
+      <div class="item-footer">
+        <div class="footer-left">
+          <div class="page-number">
+            <span>02</span>
+            / 06
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-frame">
+            <div class="frame-left">
+              <div class="en">EXPLORE MORE</div>
+              <div class="cn">点击更多</div>
+            </div>
+            <div class="frame-right">
+              <div class="arrow"></div>
+              <div class="line"></div>
+              <div :class="'aboutplus-'+index" v-for="index in 4" :key="index">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="swiper-item">
+      <div class="item-left">
+        <div class="item-left-en">BRAND CONNOTATION</div>
+        <div class="item-left-cn">品牌诠释</div>
+      </div>
+      <div class="item-right-brand">
+        <video src="http://www.seedland.cc/wp/wp-content/uploads/2019/04/video_three.mp4" muted controls loop='loop' class="brand-video"></video>
+        <div class="brand-text">
+          <div class="brand-title">品牌诠释</div>
+          <div class="brand-line"></div>
+          <div class="brand-desc">实地（Seedland0），寓意为土壤，实地一直奉行种子文化，认为生活就像是一颗种子，需要阳光、水分、土壤、空气的用心滋养，只有不断去灌溉培育，精心呵护，
+            才能让种子茁壮成长，生活才会变得更加美好幸福。不论是居住空间的创新与改造、高科技的社区智能集约，亦或是和谐人居的社区服务，实地致力于关注每一个个体的真实需求，
+            为未来全新的智慧人居生活提供完整舒适的体验服务。</div>
+        </div>
+      </div>
+      <div class="item-footer">
+        <div class="footer-left">
+          <div class="page-number">
+            <span>03</span>
+            / 06
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-frame">
+            <div class="frame-left">
+              <div class="en">EXPLORE MORE</div>
+              <div class="cn">点击更多</div>
+            </div>
+            <div class="frame-right">
+              <div class="arrow"></div>
+              <div class="line"></div>
+              <div :class="'aboutplus-'+index" v-for="index in 4" :key="index">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper>
 </template>
 
 <script>
@@ -51,6 +131,13 @@ export default {
   name:'about',
   props: {
   },
+  data(){
+    return{
+      swiperOption:{
+        loop: false
+      }
+    }
+  },
   components: {
     simplebar
   }
@@ -60,22 +147,19 @@ export default {
 <style lang="less" scoped>
 .about{
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgba(0,0,0,.5);
   color: white;
   .swiper-item{
     width:100%;
-    height: 100%;
-    margin-top: 3%;
-    margin-left: 5%;
+    height:auto;
+    padding-top: 3%;
+    padding-left: 5%;
     position: relative;
     .item-left{
       display: inline-block;
       position: absolute;
-      top: 0;
-      left: 0;
       .item-left-en{
         font-family: "DIN-Regular";
         font-size: 18px;
@@ -90,7 +174,7 @@ export default {
     .item-right{
       display: inline-block;
       width: 70vw;
-      margin: 7% 0 0 7%;
+      margin: 5% 0 0 7%;
       .profile-title-en{
         font-family: "NotoSansCJKsc-Light", sans-serif;
         font-size: 50px;
@@ -107,9 +191,9 @@ export default {
       }
       .profile-text{
         float: right;
-        margin-top: 5%;
-        width: 40vw;
-        height: 40vh;
+        margin-top: 3%;
+        width: 50vw;
+        height: 30vh;
         animation: fadeIn 500ms 3s linear forwards;
         @keyframes fadeIn{
           0%{opacity: 0;}
@@ -121,6 +205,23 @@ export default {
           font-weight: 300;
           margin-bottom: 1em;
           letter-spacing: 1px;
+        }
+      }
+      .milestones-text{
+        margin: 5%;
+        width: 70vw;
+        height: 40vh;
+        strong{
+          font-family: 'NotoSansCJKsc-Medium';
+          font-size:18px;
+        }
+        p{
+          font-family: "NotoSansCJKsc-Thin", sans-serif;
+          font-size: 18px;
+          font-weight: 300;
+          margin: 1em 0;
+          letter-spacing: 1px;
+          opacity: 0.9;
         }
       }
     }
@@ -221,6 +322,35 @@ export default {
         }
         .footer-frame:hover{
           background-color: rgb(82, 82, 82)
+        }
+      }
+    }
+    .item-right-brand{
+      display: flex;
+      width: 75vw;
+      margin: 7% 10% 5%;
+      .brand-video{
+        width: 50%;
+      }
+      .brand-text{
+        margin-left:5%;
+        .brand-title{
+          font-family: "NotoSansCJKsc-Light", sans-serif;
+          font-size: 42px;
+          font-weight: 300;
+        }
+        .brand-line{
+          border-bottom: white 1px solid;
+          width: 100px;
+          margin: 20px 0px;
+        }
+        .brand-desc{
+          font-family: "NotoSansCJKsc-Thin", sans-serif;
+          font-size: 18px;
+          max-width: 100%;
+          position: relative;
+          line-height: 24px;
+          font-weight: 300;
         }
       }
     }

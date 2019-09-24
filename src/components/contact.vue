@@ -29,8 +29,8 @@
         </span>
       </div>
       <div class="box-right">
-        <ul>
-          <li class="right-item"><a href="javascript:;">关于实地 ABOUT</a></li>
+        <ul id="menu">
+          <li class="right-item"><a href="#about">关于实地 ABOUT</a></li>
           <li class="right-item"><a href="javascript:;">地产开发 DEVELOPMENT</a></li>
           <li class="right-item"><a href="javascript:;">最新消息 LATEST NEWS</a></li>
           <li class="right-item"><a href="javascript:;">加入实地 JOIN US</a></li>
