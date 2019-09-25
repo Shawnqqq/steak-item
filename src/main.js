@@ -5,6 +5,15 @@ import router from "./router";
 import VueFullPage from 'vue-fullpage.js'
 Vue.use(VueFullPage);
 
+//scroll native 模式特性
+import vuescroll from 'vuescroll/dist/vuescroll-native';
+Vue.use(vuescroll);
+
+//element
+import ElementUI from "element-ui"
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
 //轮播图
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";

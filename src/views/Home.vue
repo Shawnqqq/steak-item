@@ -50,15 +50,15 @@ export default {
       options:{
         licenseKey: "4F375E3E-7D814D7F-B82954BA-31DC667F",
         showMenu:false,
-        // anchors: [
-        //   "loading",
-        //   "about",
-        //   "development",
-        //   "news",
-        //   "join",
-        //   "whistleblower",
-        //   "contact"
-        // ]
+        anchors: [
+          "loading",
+          "about",
+          "development",
+          "news",
+          "join",
+          "whistleblower",
+          "contact"
+        ]
       }
     }
   },

@@ -31,10 +31,10 @@
       <div class="box-right">
         <ul id="menu">
           <li class="right-item"><a href="#about">关于实地 ABOUT</a></li>
-          <li class="right-item"><a href="javascript:;">地产开发 DEVELOPMENT</a></li>
-          <li class="right-item"><a href="javascript:;">最新消息 LATEST NEWS</a></li>
-          <li class="right-item"><a href="javascript:;">加入实地 JOIN US</a></li>
-          <li class="right-item"><a href="javascript:;">廉洁举报 WHISTLEBLOWER</a></li>
+          <li class="right-item"><a href="#development">地产开发 DEVELOPMENT</a></li>
+          <li class="right-item"><a href="#news">最新消息 LATEST NEWS</a></li>
+          <li class="right-item"><a href="#join">加入实地 JOIN US</a></li>
+          <li class="right-item"><a href="#whistleblower">廉洁举报 WHISTLEBLOWER</a></li>
         </ul>
       </div>
       <div class="box-contact">
