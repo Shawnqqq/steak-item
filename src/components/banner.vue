@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="head-section">
-      <img src="@/assets/logo.gif" class="head-logo">
+      <img src="@/assets/logo.gif" class="head-logo" />
       <div class="head-nav">
         <ul class="nav" id="nav-menu">
           <a data-menuanchor="about" href="/#about">关于实地</a>
@@ -16,7 +16,7 @@
             <div class="btn-en">EN</div>
             <div class="btn-cn">CN</div>
           </div> -->
-          <img src="@/assets/menu.png" class="head-menu">
+          <img src="@/assets/menu.png" class="head-menu" />
         </div>
       </div>
     </div>
@@ -49,7 +49,13 @@
         <div class="landing-texten">SCROLL DOWN FOR MORE</div>
       </div>
       <div class="cross-box">
-        <p :class="'cross-item-'+(index+1)" v-for="(item,index) in crossData" :key="index">{{item}}</p>
+        <p
+          :class="'cross-item-' + (index + 1)"
+          v-for="(item, index) in crossData"
+          :key="index"
+        >
+          {{ item }}
+        </p>
       </div>
     </div>
     <div class="footer-section">
@@ -65,69 +71,86 @@
 <script>
 export default {
   name: "banner",
-  props: {
-  },
-  data(){
-    return{
-      crossData:['+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+','+']
-    }
+  props: {},
+  data() {
+    return {
+      crossData: [
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+",
+        "+"
+      ]
+    };
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-.container{
+.container {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  .head-section{
+  .head-section {
     width: 100%;
     height: 12%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .head-logo{
+    .head-logo {
       width: 270px;
       height: 20px;
       margin-left: 60px;
     }
-    .head-nav{
+    .head-nav {
       display: flex;
     }
-    .nav{
+    .nav {
       display: flex;
       width: 600px;
       box-sizing: border-box;
-      a{
+      a {
         width: 100px;
         height: 70px;
         padding-top: 34px;
         font-size: 14px;
-        color:#fff;
+        color: #fff;
         text-decoration: none;
         border-top: 3px solid #ffffff;
-        border-color:transparent;
+        border-color: transparent;
       }
-      a:hover{
-        border-color:#fff;
+      a:hover {
+        border-color: #fff;
       }
     }
-    .head-btn{
+    .head-btn {
       margin: 30px 0 0 80px;
       display: flex;
-      .btn-language{
+      .btn-language {
         color: #fff;
         font-size: 13px;
-        .btn-en{
+        .btn-en {
           cursor: pointer;
         }
-        .btn-cn{
+        .btn-cn {
           cursor: pointer;
         }
       }
-      .head-menu{
+      .head-menu {
         width: 25px;
         height: 18px;
         margin: 0 40px 0 25px;
@@ -135,22 +158,22 @@ export default {
       }
     }
   }
-  .body-section{
+  .body-section {
     width: 100%;
     height: 74%;
     position: relative;
-    .langding-border{
+    .langding-border {
       position: absolute;
       height: 100%;
       width: 100%;
-      .border-top{
+      .border-top {
         width: 0;
         top: 0;
         position: absolute;
         animation: lineardashcenter 1s 3s linear forwards;
         transform-origin: center;
       }
-      .border-bottom{
+      .border-bottom {
         width: 0;
         bottom: 0;
         position: absolute;
@@ -158,218 +181,220 @@ export default {
         animation: lineardashcenter 1s 3s linear forwards;
         transform-origin: center;
       }
-      @keyframes lineardashcenter{
-        0%{
-          left:50%;
-          right:50%;
-          width:0%;
+      @keyframes lineardashcenter {
+        0% {
+          left: 50%;
+          right: 50%;
+          width: 0%;
         }
-        100%{
-          left:0%;
-          right:0%;
-          width:100%;
+        100% {
+          left: 0%;
+          right: 0%;
+          width: 100%;
         }
       }
     }
-    .landing-grid{
+    .landing-grid {
       height: 100%;
       width: 100%;
       position: absolute;
-      @keyframes linearh1{
-        0%{
-          left:37.5%;
-          right:62.5%;
-          width:0%;
+      @keyframes linearh1 {
+        0% {
+          left: 37.5%;
+          right: 62.5%;
+          width: 0%;
         }
-        100%{
-          left:0%;
-          right:0%;
-          width:100%;
-        }
-      }
-      @keyframes linearh2{
-        0%{
-          left:75%;
-          right:25%;
-          width:0%;
-        }
-        100%{
-          left:0%;
-          right:0%;
-          width:100%;
+        100% {
+          left: 0%;
+          right: 0%;
+          width: 100%;
         }
       }
-      @keyframes linearh3{
-        0%{
-          width:0%;
+      @keyframes linearh2 {
+        0% {
+          left: 75%;
+          right: 25%;
+          width: 0%;
         }
-        100%{
-          width:100%;
+        100% {
+          left: 0%;
+          right: 0%;
+          width: 100%;
         }
       }
-      .grid-border-1{
+      @keyframes linearh3 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .grid-border-1 {
         position: absolute;
         top: 24%;
         opacity: 0.9;
         animation: linearh1 1s 4s linear forwards;
       }
-      .grid-border-2{
+      .grid-border-2 {
         position: absolute;
         top: 51%;
         opacity: 0.5;
         animation: linearh2 1s 4s linear forwards;
       }
-      .grid-border-3{
+      .grid-border-3 {
         top: 75%;
         position: absolute;
         opacity: 0.5;
         animation: linearh3 1s 4s linear forwards;
       }
     }
-    .landing-vertical{
+    .landing-vertical {
       height: 100%;
       width: 100%;
       position: absolute;
-      @keyframes linearv1{
-        0%{
-          top:75%;
-          bottom:25%;
-          height:0%;
+      @keyframes linearv1 {
+        0% {
+          top: 75%;
+          bottom: 25%;
+          height: 0%;
         }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
-        }
-      }
-      @keyframes linearv2{
-        0%{
-          top:50%;
-          bottom:50%;
-          height:0%;
-        }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
         }
       }
-      @keyframes linearv3{
-        0%{
-          top:75%;
-          bottom:25%;
-          height:0%;
+      @keyframes linearv2 {
+        0% {
+          top: 50%;
+          bottom: 50%;
+          height: 0%;
         }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
+        }
+      }
+      @keyframes linearv3 {
+        0% {
+          top: 75%;
+          bottom: 25%;
+          height: 0%;
+        }
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
           width: 1px;
         }
       }
-      @keyframes linearv4{
-        0%{
-          top:50%;
-          bottom:50%;
-          height:0%;
+      @keyframes linearv4 {
+        0% {
+          top: 50%;
+          bottom: 50%;
+          height: 0%;
         }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
           width: 1px;
         }
       }
-      @keyframes linearv5{
-        0%{
-          top:25%;
-          bottom:75%;
-          height:0%;
+      @keyframes linearv5 {
+        0% {
+          top: 25%;
+          bottom: 75%;
+          height: 0%;
         }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
           width: 1px;
         }
       }
-      @keyframes linearv6{
-        0%{
-          top:50%;
-          bottom:50%;
-          height:0%;
+      @keyframes linearv6 {
+        0% {
+          top: 50%;
+          bottom: 50%;
+          height: 0%;
         }
-        100%{
-          top:0%;
-          bottom:0%;
-          height:100%;
+        100% {
+          top: 0%;
+          bottom: 0%;
+          height: 100%;
         }
       }
-      .vertical-1{
+      .vertical-1 {
         position: absolute;
-        left: calc((100%/2)/4);
+        left: calc((100% / 2) / 4);
         animation: linearv1 1s 3s linear forwards;
       }
-      .vertical-2{
+      .vertical-2 {
         position: absolute;
-        left: calc(((100%/2)/4)*2);
+        left: calc(((100% / 2) / 4) * 2);
         animation: linearv2 1s 3s linear forwards;
       }
-      .vertical-3{
+      .vertical-3 {
         position: absolute;
-        left: calc(((100%/2)/4)*3);
+        left: calc(((100% / 2) / 4) * 3);
         animation: linearv3 1s 4s linear forwards;
       }
-      .vertical-4{
+      .vertical-4 {
         position: absolute;
-        left: calc(100%/2);
+        left: calc(100% / 2);
         opacity: 0.3;
         animation: linearv4 1s 4s linear forwards;
       }
-      .vertical-5{
+      .vertical-5 {
         position: absolute;
-        right: calc(((100%/2)/4)*3);
+        right: calc(((100% / 2) / 4) * 3);
         opacity: 0.3;
         animation: linearv5 1s 4s linear forwards;
       }
-      .vertical-6{
+      .vertical-6 {
         position: absolute;
-        right: calc(((100%/2)/4)*2);
+        right: calc(((100% / 2) / 4) * 2);
         opacity: 0.3;
         animation: linearv6 1s 3s linear forwards;
       }
-      .vertical-7{
+      .vertical-7 {
         position: absolute;
-        right: calc((100%/2)/4);
+        right: calc((100% / 2) / 4);
         animation: linearv6 1s 3s linear forwards;
       }
     }
-    .horizontal{
+    .horizontal {
       border-bottom: solid 0.05em transparent;
-      background-image: linear-gradient(white, white), radial-gradient(#fafafa,rgba(0,0,0,0));
+      background-image: linear-gradient(white, white),
+        radial-gradient(#fafafa, rgba(0, 0, 0, 0));
       background-origin: border-box;
       background-clip: content-box, border-box;
     }
-    .vertical{
+    .vertical {
       opacity: 0.8;
       border-left: solid 0.05em transparent;
-      background-image: linear-gradient(white, white), radial-gradient(#fafafa,rgba(0,0,0,0));
+      background-image: linear-gradient(white, white),
+        radial-gradient(#fafafa, rgba(0, 0, 0, 0));
       background-origin: border-box;
       background-clip: content-box, border-box;
     }
-    .body-title{
+    .body-title {
       position: relative;
       float: right;
       width: 50%;
       top: 25.5%;
-      .landing-title{
+      .landing-title {
         font-family: "DIN-Regular";
         font-weight: 300;
-        font-size:40px;
+        font-size: 40px;
         letter-spacing: 8px;
         color: white;
       }
-      .ladding-subtitle{
+      .ladding-subtitle {
         font-family: "NotoSansCJKsc-Thin";
         padding-top: 2%;
         font-size: 35px;
@@ -378,11 +403,11 @@ export default {
         letter-spacing: 8px;
       }
     }
-    .down-more{
+    .down-more {
       position: absolute;
       bottom: 0;
-      left:0;
-      right:0;
+      left: 0;
+      right: 0;
       text-align: center;
       transform: translateY(2px);
       opacity: 0;
@@ -397,133 +422,133 @@ export default {
           opacity: 1;
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-        } 
+        }
       }
-      .landing-textcn{
+      .landing-textcn {
         font-family: "NotoSansCJKsc-Regular";
         font-size: 20px;
         opacity: 0.8;
         margin-bottom: 7px;
-        color:white;
+        color: white;
       }
-      .landing-texten{
+      .landing-texten {
         font-size: 14px;
         color: white;
         letter-spacing: 3px;
         text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         padding-bottom: 14px;
         display: inline-block;
         border-bottom: 2px dashed #fff;
       }
     }
-    .cross-box{ 
+    .cross-box {
       width: 100%;
       position: absolute;
       bottom: 0;
       top: 0;
-      p{
+      p {
         opacity: 0;
         animation: fadeIncross 1s 4s forwards;
         font-size: 21px;
         margin-top: 1px;
         color: white;
-        @keyframes fadeIncross{
-          0%{
+        @keyframes fadeIncross {
+          0% {
             opacity: 0;
           }
-          100%{
+          100% {
             opacity: 1;
           }
         }
       }
-      .cross-item-1{
+      .cross-item-1 {
         top: 25%;
         left: 12.5%;
-        transform: translate(-5px,-17px);
+        transform: translate(-5px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-2{
+      .cross-item-2 {
         left: 12.5%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         top: 75%;
       }
-      .cross-item-3{
+      .cross-item-3 {
         top: 0%;
         left: 25%;
-        transform: translate(-5px,-11px);
+        transform: translate(-5px, -11px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-4{
+      .cross-item-4 {
         top: 52%;
         left: 25%;
-        transform: translate(-5px,-17px);
+        transform: translate(-5px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-5{
+      .cross-item-5 {
         top: 100%;
         left: 25%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-6{
+      .cross-item-6 {
         top: 0%;
         left: 50%;
-        transform: translate(-5px,-11px);
+        transform: translate(-5px, -11px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-7{
+      .cross-item-7 {
         top: 52%;
         left: 50%;
-        transform: translate(-5px,-17px);
+        transform: translate(-5px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-8{
+      .cross-item-8 {
         top: 100%;
         left: 50%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-9{
+      .cross-item-9 {
         top: 25%;
         right: 37%;
-        transform: translate(-5px,-17px);
+        transform: translate(-5px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-10{
+      .cross-item-10 {
         top: 75%;
         right: 37%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-11{
+      .cross-item-11 {
         top: 0%;
         right: 25%;
-        transform: translate(5px,-11px);
+        transform: translate(5px, -11px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-12{
+      .cross-item-12 {
         top: 52%;
         right: 25%;
         transform: translate(4px, -18px);
@@ -531,60 +556,60 @@ export default {
         margin: 0;
         padding: 0;
       }
-      .cross-item-13{
+      .cross-item-13 {
         top: 100%;
         right: 25%;
-        transform: translate(5px,-13px);
+        transform: translate(5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-14{
+      .cross-item-14 {
         top: 25%;
         right: 12%;
-        transform: translate(0px,-17px);
+        transform: translate(0px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-15{
+      .cross-item-15 {
         top: 75%;
         right: 12%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-16{
+      .cross-item-16 {
         top: 75%;
         left: 37.5%;
-        transform: translate(-5px,-13px);
+        transform: translate(-5px, -13px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
-      .cross-item-17{
+      .cross-item-17 {
         top: 25%;
         left: 37.5%;
-        transform: translate(-5px,-17px);
+        transform: translate(-5px, -17px);
         position: absolute;
         margin: 0;
         padding: 0;
       }
     }
   }
-  .footer-section{
+  .footer-section {
     width: 100%;
     height: 14%;
     position: relative;
-    .landing-mouse{
+    .landing-mouse {
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0%;
       opacity: 0;
       animation: fadeInDown 1s 5s linear forwards;
-      @keyframes fadeInDown{
+      @keyframes fadeInDown {
         from {
           opacity: 0;
           -webkit-transform: translate3d(0, -100%, 0);
@@ -594,9 +619,9 @@ export default {
           opacity: 1;
           -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-        } 
+        }
       }
-      .mouse-btn{
+      .mouse-btn {
         position: relative;
         display: block;
         width: 30px;
@@ -606,7 +631,7 @@ export default {
         border: 2px solid white;
         border-radius: 15px;
         opacity: 0.8;
-        .block{
+        .block {
           position: absolute;
           left: 50%;
           width: 8px;
@@ -616,20 +641,20 @@ export default {
           border-radius: 50%;
           animation: ani-mouse 2.5s linear infinite;
         }
-        @keyframes ani-mouse{
-          0%{
+        @keyframes ani-mouse {
+          0% {
             opacity: 1;
             top: 29%;
           }
-          15%{
+          15% {
             opacity: 1;
             top: 71%;
           }
-          50%{
+          50% {
             opacity: 0;
             top: 71%;
           }
-          100%{
+          100% {
             opacity: 0;
             top: 71%;
           }
@@ -638,4 +663,4 @@ export default {
     }
   }
 }
-</style> 
+</style>
