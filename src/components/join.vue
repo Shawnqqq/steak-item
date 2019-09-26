@@ -1,7 +1,7 @@
 <template>
   <div class="join">
     <div class="nav-bar">
-      <img src="@/assets/menu.png" class="head-logo" />
+      <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
     </div>
     <div class="join-box">
       <div class="join-text">
@@ -12,16 +12,29 @@
         <morePart />
       </div>
     </div>
+    <sideNav v-if="navLock" @close="closeNav"/>
   </div>
 </template>
 
 <script>
 import morePart from "@/components/morePart.vue";
+import sideNav from "@/components/sideNav.vue";
 
 export default {
   name: "join",
+  data(){
+    return{
+      navLock:false
+    }
+  },
   components: {
-    morePart
+    morePart,
+    sideNav
+  },
+  methods:{
+    closeNav(val){
+      this.navLock = val
+    }
   }
 };
 </script>

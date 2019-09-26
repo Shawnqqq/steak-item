@@ -1,7 +1,7 @@
 <template>
   <div class="whistleblower">
     <div class="nav-bar">
-      <img src="@/assets/menu.png" class="head-logo" />
+      <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
     </div>
     <div class="whistleblower-box">
       <div class="whistleblower-text">
@@ -12,16 +12,29 @@
         <morePart />
       </div>
     </div>
+    <sideNav v-if="navLock" @close="closeNav"/>
   </div>
 </template>
 
 <script>
 import morePart from "@/components/morePart.vue";
+import sideNav from "@/components/sideNav.vue";
 
 export default {
   name: "whistleblower",
+  data(){
+    return{
+      navLock:false
+    }
+  },
   components: {
+    sideNav,
     morePart
+  },
+  methods:{
+    closeNav(val){
+      this.navLock = val
+    }
   }
 };
 </script>

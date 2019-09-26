@@ -16,19 +16,19 @@
       ></video>
     </div>
     <full-page
-      v-show="!imgLock"
+      v-if="!imgLock"
       class="home"
       ref="fullpage"
       :options="options"
       id="fullpage"
     >
-      <div class="section"><banner /></div>
-      <div class="section"><about /></div>
-      <div class="section"><development /></div>
-      <div class="section"><news /></div>
-      <div class="section"><join /></div>
-      <div class="section"><whistleblower /></div>
-      <div class="section"><contact /></div>
+      <div class="section" ><banner /></div>
+      <div class="section" ><about /></div>
+      <div class="section" ><development /></div>
+      <div class="section" ><news /></div>
+      <div class="section" ><join /></div>
+      <div class="section" ><whistleblower /></div>
+      <div class="section" ><contact /></div>
     </full-page>
   </div>
 </template>
@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      imgLock: false,
+      imgLock: true,
       options: {
         licenseKey: "4F375E3E-7D814D7F-B82954BA-31DC667F",
         showMenu: false,
@@ -76,17 +76,13 @@ export default {
     let video = document.getElementById("video-bg");
     video.addEventListener(
       "canplaythrough",
-      function() {
+      ()=>{
         this.imgLock = false;
       },
       false
     );
+
   }
-  // watch: {
-  //   imgLock(val, oldVal) {
-  //     console.log(1);
-  //   }
-  // }
 };
 </script>
 

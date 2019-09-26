@@ -4,19 +4,19 @@
       <img src="@/assets/logo.gif" class="head-logo" />
       <div class="head-nav">
         <ul class="nav" id="nav-menu">
-          <a data-menuanchor="about" href="/#about">关于实地</a>
-          <a data-menuanchor="development" href="/#development">地产开发</a>
-          <a data-menuanchor="news" href="/#news">最新消息</a>
-          <a data-menuanchor="join" href="/#join">加入实地</a>
-          <a data-menuanchor="whistleblower" href="/#whistleblower">廉洁举报</a>
-          <a data-menuanchor="contact" href="/#contact">联系我们</a>
+          <a data-menuanchor="about" @click="goToSection('about')">关于实地</a>
+          <a data-menuanchor="development" @click="goToSection('development')">地产开发</a>
+          <a data-menuanchor="news" @click="goToSection('news')">最新消息</a>
+          <a data-menuanchor="join" @click="goToSection('join')">加入实地</a>
+          <a data-menuanchor="whistleblower" @click="goToSection('whistleblower')">廉洁举报</a>
+          <a data-menuanchor="contact" @click="goToSection('contact')">联系我们</a>
         </ul>
         <div class="head-btn">
           <!-- <div class="btn-language">
             <div class="btn-en">EN</div>
             <div class="btn-cn">CN</div>
           </div> -->
-          <img src="@/assets/menu.png" class="head-menu" />
+          <img src="@/assets/menu.png" class="head-menu" @click="navLock = true"/>
         </div>
       </div>
     </div>
@@ -50,11 +50,11 @@
       </div>
       <div class="cross-box">
         <p
-          :class="'cross-item-' + (index + 1)"
-          v-for="(item, index) in crossData"
+          :class="'cross-item-' + index"
+          v-for="index in 17"
           :key="index"
         >
-          {{ item }}
+          +
         </p>
       </div>
     </div>
@@ -65,35 +65,30 @@
         </div>
       </div>
     </div>
+    <sideNav v-if="navLock" @close="closeNav"/>
   </div>
 </template>
 
 <script>
+import sideNav from "@/components/sideNav.vue";
+
 export default {
   name: "banner",
-  props: {},
-  data() {
-    return {
-      crossData: [
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+",
-        "+"
-      ]
-    };
+  data(){
+    return{
+      navLock:false
+    }
+  },
+  components:{
+    sideNav
+  },
+  methods:{
+    goToSection(section) {
+      fullpage_api.moveTo(section)
+    },
+    closeNav(val){
+      this.navLock = val
+    }
   }
 };
 </script>
