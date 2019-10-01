@@ -5,18 +5,30 @@
       <div class="head-nav">
         <ul class="nav" id="nav-menu">
           <a data-menuanchor="about" @click="goToSection('about')">关于实地</a>
-          <a data-menuanchor="development" @click="goToSection('development')">地产开发</a>
+          <a data-menuanchor="development" @click="goToSection('development')"
+            >地产开发</a
+          >
           <a data-menuanchor="news" @click="goToSection('news')">最新消息</a>
           <a data-menuanchor="join" @click="goToSection('join')">加入实地</a>
-          <a data-menuanchor="whistleblower" @click="goToSection('whistleblower')">廉洁举报</a>
-          <a data-menuanchor="contact" @click="goToSection('contact')">联系我们</a>
+          <a
+            data-menuanchor="whistleblower"
+            @click="goToSection('whistleblower')"
+            >廉洁举报</a
+          >
+          <a data-menuanchor="contact" @click="goToSection('contact')"
+            >联系我们</a
+          >
         </ul>
         <div class="head-btn">
           <!-- <div class="btn-language">
             <div class="btn-en">EN</div>
             <div class="btn-cn">CN</div>
           </div> -->
-          <img src="@/assets/menu.png" class="head-menu" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-menu"
+            @click="navLock = true"
+          />
         </div>
       </div>
     </div>
@@ -49,11 +61,7 @@
         <div class="landing-texten">SCROLL DOWN FOR MORE</div>
       </div>
       <div class="cross-box">
-        <p
-          :class="'cross-item-' + index"
-          v-for="index in 17"
-          :key="index"
-        >
+        <p :class="'cross-item-' + index" v-for="index in 17" :key="index">
           +
         </p>
       </div>
@@ -65,7 +73,7 @@
         </div>
       </div>
     </div>
-    <sideNav v-if="navLock" @close="closeNav"/>
+    <sideNav v-if="navLock" @close="closeNav" />
   </div>
 </template>
 
@@ -74,20 +82,20 @@ import sideNav from "@/components/sideNav.vue";
 
 export default {
   name: "banner",
-  data(){
-    return{
-      navLock:false
-    }
+  data() {
+    return {
+      navLock: false
+    };
   },
-  components:{
+  components: {
     sideNav
   },
-  methods:{
+  methods: {
     goToSection(section) {
-      fullpage_api.moveTo(section)
+      fullpage_api.moveTo(section);
     },
-    closeNav(val){
-      this.navLock = val
+    closeNav(val) {
+      this.navLock = val;
     }
   }
 };
@@ -157,6 +165,7 @@ export default {
     width: 100%;
     height: 74%;
     position: relative;
+    font-size: 14px;
     .langding-border {
       position: absolute;
       height: 100%;

@@ -19,9 +19,18 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
 Vue.use(VueAwesomeSwiper);
 
+//rem自适应
+import size from './utils/size';
+Vue.use(size);
+
+//监听手指滑动
+import VueTouch from 'vue-touch'
+Vue.use(VueTouch, {name: 'v-touch'})
+
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   render: h => h(App)
 }).$mount("#app");
+

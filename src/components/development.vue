@@ -188,6 +188,7 @@ export default {
         background-repeat: no-repeat;
         white-space: nowrap;
         transition: all 2s ease-in-out;
+        font-size: 14px;
         .bg-color {
           position: absolute;
           width: 100%;

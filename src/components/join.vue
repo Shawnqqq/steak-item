@@ -1,7 +1,7 @@
 <template>
   <div class="join">
     <div class="nav-bar">
-      <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+      <img src="@/assets/menu.png" class="head-logo" @click="navLock = true" />
     </div>
     <div class="join-box">
       <div class="join-text">
@@ -12,7 +12,7 @@
         <morePart />
       </div>
     </div>
-    <sideNav v-if="navLock" @close="closeNav"/>
+    <sideNav v-if="navLock" @close="closeNav" />
   </div>
 </template>
 
@@ -22,18 +22,18 @@ import sideNav from "@/components/sideNav.vue";
 
 export default {
   name: "join",
-  data(){
-    return{
-      navLock:false
-    }
+  data() {
+    return {
+      navLock: false
+    };
   },
   components: {
     morePart,
     sideNav
   },
-  methods:{
-    closeNav(val){
-      this.navLock = val
+  methods: {
+    closeNav(val) {
+      this.navLock = val;
     }
   }
 };
@@ -47,7 +47,7 @@ export default {
   position: relative;
   .nav-bar {
     position: absolute;
-    top: 8%;
+    top: 0;
     right: 6%;
     z-index: 1;
     img {

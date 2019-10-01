@@ -25,6 +25,7 @@ export default {
   border: 1px solid #fafafa;
   padding: 10px 13px 0px;
   width: 350px;
+  font-size: 16px;
   .more-left {
     font-size: 18px;
     width: auto;

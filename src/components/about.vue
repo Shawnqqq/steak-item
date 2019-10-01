@@ -57,9 +57,13 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="nav-bar">
-          <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-logo"
+            @click="navLock = true"
+          />
         </div>
-      </swiper-slide> -->
+      </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="item-left">
           <div class="item-left-en">MILESTONES</div>
@@ -131,7 +135,11 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="nav-bar">
-          <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-logo"
+            @click="navLock = true"
+          />
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
@@ -195,7 +203,11 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="nav-bar">
-          <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-logo"
+            @click="navLock = true"
+          />
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
@@ -210,7 +222,11 @@
               @click="render = true"
             >
               实地文化 [Culture]
-              <div :class="'ideal-push-' + index" v-for="index in 4" :key="index">
+              <div
+                :class="'ideal-push-' + index"
+                v-for="index in 4"
+                :key="index"
+              >
                 +
               </div>
             </div>
@@ -219,7 +235,11 @@
               @click="render = false"
             >
               实地愿景 [Vision]
-              <div :class="'ideal-push-' + index" v-for="index in 4" :key="index">
+              <div
+                :class="'ideal-push-' + index"
+                v-for="index in 4"
+                :key="index"
+              >
                 +
               </div>
             </div>
@@ -273,7 +293,11 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="nav-bar">
-          <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-logo"
+            @click="navLock = true"
+          />
         </div>
       </swiper-slide>
       <swiper-slide class="swiper-item">
@@ -373,11 +397,15 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="nav-bar">
-          <img src="@/assets/menu.png" class="head-logo" @click="navLock = true"/>
+          <img
+            src="@/assets/menu.png"
+            class="head-logo"
+            @click="navLock = true"
+          />
         </div>
       </swiper-slide>
     </swiper>
-    <sideNav v-if="navLock" @close="closeNav"/>
+    <sideNav v-if="navLock" @close="closeNav" />
   </div>
 </template>
 
@@ -387,7 +415,7 @@ import sideNav from "@/components/sideNav.vue";
 export default {
   name: "about",
   props: {},
-  components:{
+  components: {
     sideNav
   },
   data() {
@@ -404,7 +432,7 @@ export default {
         }
       },
       render: true,
-      navLock:false,
+      navLock: false,
       idealText1: [
         {
           title: "万物向阳 实地生长",
@@ -421,9 +449,9 @@ export default {
       ]
     };
   },
-  methods:{
-    closeNav(val){
-      this.navLock = val
+  methods: {
+    closeNav(val) {
+      this.navLock = val;
     }
   },
   watch: {
@@ -457,9 +485,10 @@ export default {
 </script>
 
 <style lang="less">
-.container{
+.container {
   width: 100%;
   height: 100%;
+  position: relative;
   .about {
     height: 100%;
     display: flex;
@@ -568,6 +597,7 @@ export default {
           right: 80px;
           bottom: 30px;
           padding-right: 80px;
+          font-size: 16px;
           .footer-frame {
             background-color: transparent;
             transition: background-color 0.3s ease-in;
@@ -895,9 +925,9 @@ export default {
           opacity: 1;
         }
       }
-      .nav-bar{
+      .nav-bar {
         position: absolute;
-        top: 8%;
+        top: 0;
         right: 6%;
         z-index: 1;
         img {

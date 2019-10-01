@@ -15,83 +15,60 @@
         src="@/assets/videobg.mp4"
       ></video>
     </div>
-    <full-page
-      v-if="!imgLock"
-      class="home"
-      ref="fullpage"
-      :options="options"
-      id="fullpage"
-    >
-      <div class="section" ><banner /></div>
-      <div class="section" ><about /></div>
-      <div class="section" ><development /></div>
-      <div class="section" ><news /></div>
-      <div class="section" ><join /></div>
-      <div class="section" ><whistleblower /></div>
-      <div class="section" ><contact /></div>
-    </full-page>
+    <div v-if="!imgLock" class="home">
+      <pcPage v-if="pc"/>
+      <mobilePage v-else/>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import banner from "@/components/banner.vue";
-import about from "@/components/about.vue";
-import development from "@/components/development.vue";
-import news from "@/components/news.vue";
-import join from "@/components/join.vue";
-import whistleblower from "@/components/whistleblower.vue";
-import contact from "@/components/contact.vue";
+import pcPage from "@/pages/PC-page.vue";
+import mobilePage from "@/pages/Mobile-page.vue";
 
 export default {
   name: "home",
-  components: {
-    banner,
-    about,
-    development,
-    news,
-    join,
-    whistleblower,
-    contact
-  },
   data() {
     return {
       imgLock: true,
-      options: {
-        licenseKey: "4F375E3E-7D814D7F-B82954BA-31DC667F",
-        showMenu: false,
-        anchors: [
-          "loading",
-          "about",
-          "development",
-          "news",
-          "join",
-          "whistleblower",
-          "contact"
-        ]
-      }
-    };
+      pc:true
+    }
+  },
+  components:{
+    pcPage,
+    mobilePage
   },
   mounted() {
     let video = document.getElementById("video-bg");
     video.addEventListener(
       "canplaythrough",
-      ()=>{
+      () => {
         this.imgLock = false;
       },
       false
-    );
-
+    ),
+    window.addEventListener('pageshow',this.mobileFunc)
+    window.addEventListener('resize',this.mobileFunc)
+  },
+  methods:{
+    mobileFunc(){
+      let width = document.documentElement.clientWidth;
+      if(width<1025){
+        this.pc = false
+      }else if(width>1024){
+        this.pc = true
+      }
+    }
   }
 };
 </script>
 
 <style lang="less" scoped>
-.container {
+.container{
   position: relative;
   width: 100%;
   height: 100%;
-  .loading-image {
+  .loading-image{
     width: 100vw;
     height: 100vh;
     background-color: #000;
