@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <img class="header-menu" src="@/assets/menu.png">
+      <img class="header-menu" src="@/assets/menu.png" @click="navLock=true">
       <img class="header-logo" src="@/assets/logo.gif">
     </div>
     <div class="body">
@@ -19,12 +19,27 @@
         <div class="slideball"></div>
       </div>
     </div>
+    <sideNavMobile v-if="navLock" @close="closeNav" />
   </div>
 </template>
 
 <script>
+import sideNavMobile from "@/components/sideNavMobile.vue";
+
 export default {
-  
+  data(){
+    return{
+      navLock:false
+    }
+  },
+  components:{
+    sideNavMobile
+  },
+  methods:{
+    closeNav(val){
+      this.navLock = val;
+    }
+  }
 }
 </script>
 

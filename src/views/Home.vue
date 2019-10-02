@@ -12,7 +12,7 @@
         muted="muted"
         loop="loop"
         autoplay="autoplay"
-        src="@/assets/videobg.mp4"
+        src="http://www.seedland.cc/assets/videos/videobg.mp4"
       ></video>
     </div>
     <div v-if="!imgLock" class="home">

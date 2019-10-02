@@ -8,6 +8,7 @@
     <div class="section"><bannerMobile /></div>
     <div class="section"><aboutMobile /></div>
     <div class="section"><developmentMobile /></div>
+    <div class="section"><newsMobile /></div>
   </full-page>
 </template>
 
@@ -15,19 +16,27 @@
 import bannerMobile from "@/components/bannerMobile.vue";
 import aboutMobile from "@/components/aboutMobile.vue";
 import developmentMobile from "@/components/developmentMobile.vue";
+import newsMobile from "@/components/newsMobile.vue";
 
 export default {
   data(){
     return{
       options:{
         licenseKey: "4F375E3E-7D814D7F-B82954BA-31DC667F",
+        anchors: [
+          "bannerMobile",
+          "aboutMobile",
+          "developmentMobile",
+          "newsMobile",
+        ]
       }
     }
   },
   components:{
     bannerMobile,
     aboutMobile,
-    developmentMobile
+    developmentMobile,
+    newsMobile
   }
 }
 </script>

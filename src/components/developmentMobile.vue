@@ -24,6 +24,15 @@
     <div class="deve-line">
       <div class="deve-line-index" id="deve-line-index" :style="{width:100/itemMax+'%'}"></div>
     </div>
+    <div class="deve-more">
+      <div class="deve-more-left">
+        <p class="deve-more-en">SLIDE FOR MORE</p>
+        <p class="deve-more-cn">滑动更多</p>
+      </div>
+      <div class="deve-more-right">
+        <div class="deve-more-ball"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -136,9 +145,9 @@ export default {
         height: 100%;
         vertical-align: top;
         background-size: cover;
-        border: 3px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border: 3*@p solid black;
+        border-left: 1*@p solid black;
+        border-right: 1*@p solid black;
         .deve-item-title{
           font-size: 26*@p;
           padding: 15*@p 0 0 15*@p;
@@ -159,6 +168,49 @@ export default {
       background-color: #ffffff9f;
       border-radius: 15*@p;
       height: 15*@p;
+    }
+  }
+  .deve-more{
+    display: flex;
+    margin: 20*@p;
+    .deve-more-left{
+      font-size: 22*@p;
+      line-height: 1.5;
+      text-align: end;
+      margin-right: 20*@p;
+      .deve-more-cn{
+        font-size: 18*@p;
+      }
+    }
+    .deve-more-right{
+      border: 4*@p solid #fff;
+      height: 46*@p;
+      width: 75*@p;
+      border-radius: 25*@p;
+      padding: 7*@p;
+      display: block;
+      position: relative;
+      margin-top: 13*@p;
+      .deve-more-ball{
+        position: absolute;
+        border: 2*@p solid #fff;
+        background-color: #fff;
+        height: 15*@p;
+        width: 15*@p;
+        border-radius: 20*@p;
+        top: 26%;
+        animation: slideiconleft 2s 1s linear infinite;
+      }
+      @keyframes slideiconleft {
+        0%{
+          opacity: 1;
+          left:70%;
+        }
+        100%{
+          opacity: 0;
+          left: 10%;
+        }
+      }
     }
   }
 }
