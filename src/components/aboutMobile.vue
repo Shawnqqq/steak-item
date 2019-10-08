@@ -3,19 +3,19 @@
     <swiper class="about" :options="swiperOption" ref="mySwiper">
       <swiper-slide class="swiper-item">
         <div class="item-title">
-          <div class="title-en">PROFILE</div>
-          <div class="title-cn">项目简介</div>
+          <div class="title-en">ABOUT</div>
+          <div class="title-cn">汉和牛</div>
         </div>
         <div class="item-container">
           <div class="item-content">
-            <div class="item-content-title">Craftsmanship creates quality life products
-              <br/>匠心筑就智慧人居精品
+            <div class="item-content-title">Craftsmanship creates quality steak
+              <br/>匠心筑就品质牛排
             </div>
             <div class="item-content-line"></div>
             <div class="item-content-text">
-              <p>实地集团，2006年从广州出发，始于地产而不止于地产。13年来，
-                实地一直致力于将人类科技的一切探索创新以人居业态为依托运用于生活中的方方面面，将科技与人文连接，
-                重新构建人类对于自身与居住空间关系的认知。目前，实地集团已经发展成为一家为用户提供贯穿全生命周期智慧人居解决方案的综合性企业。
+              <p>匠心养牛在坚持，品质出品在实力
+                望和牛，世界顶级的和牛科学养殖体系，100多种饲料精选和配比，申请国家多项专利，智慧农场3.0用物联网IOT检测并干预和牛的成长。
+                望和牛，与肉类加工领导者顶乐集团的战略合作，业内顶尖的屠宰，排酸，急冻，分割，精修等加工技术
               </p>
             </div>
           </div>
@@ -32,23 +32,12 @@
       </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="item-title">
-          <div class="title-en">PHILOSOPHY</div>
-          <div class="title-cn">实地理念</div>
+          <div class="title-en">HOW</div>
+          <div class="title-cn">如何煎好一块牛排</div>
         </div>
         <div class="item-container">
           <div class="item-content">
-            <div class="item-content-title">Culture
-              <br/>实地文化
-            </div>
-            <div class="item-content-line"></div>
-            <div class="item-content-text">
-              <p>
-                我们认为,生活就像是一颗种子，需要阳光、水分、土壤、空气的用心滋养，只有不断去灌溉培育，精心呵护，才能让种子茁壮成长，生活才会变得更加美好幸福。
-              </p>
-              <p>
-                实地集团将为孕育人们美好生活的种子提供养分与能量，扶植他们破土发芽，生根向阳，去向更美好的地方。
-              </p>
-            </div>
+            <img class="item-content-iamge" src="@/assets/how-1.jpg">
           </div>
         </div>
         <div class="item-footer">
@@ -141,6 +130,9 @@ export default {
             p{
               margin: 20*@p 0;
             }
+          }
+          .item-content-iamge{
+            width: 100%;
           }
         }
       }

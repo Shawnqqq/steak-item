@@ -3,28 +3,23 @@
     <swiper class="about" :options="swiperOption" ref="mySwiper">
       <swiper-slide class="swiper-item">
         <div class="item-left">
-          <div class="item-left-en">PROFILE</div>
-          <div class="item-left-cn">项目简介</div>
+          <div class="item-left-en">ABOUT</div>
+          <div class="item-left-cn">汉和牛</div>
         </div>
         <div class="item-right">
           <div class="profile-title-en">
-            Craftsmanship creates quality life products
+            Craftsmanship creates quality steak
           </div>
-          <div class="profile-title-cn">匠心筑就智慧人居精品</div>
+          <div class="profile-title-cn">匠心筑就品质牛排</div>
           <div class="profile-text">
             <p>
-              实地集团，2006年从广州出发，始于地产而不止于地产。13年来，实地一直致力于将人类科技的一切探索创新以人居业态为依托运用于生活中的方方面面，
-              将科技与人文连接，重新构建人类对于自身与居住空间关系的认知。目前，实地集团已经发展成为一家为用户提供贯穿全生命周期智慧人居解决方案的综合性企业。
+              匠心养牛在坚持，品质出品在实力
             </p>
             <p>
-              实地集团现已覆盖全国六大最具成长力城市群，在26城全面绽放。每落子一地，均从区域先天资源的统筹观出发，开发每个城市的独特魅力，
-              探索每个城市的人文价值，创造与之匹配的智能生活解决方案，为每座城市打造专属的人居经典。
+              望和牛，世界顶级的和牛科学养殖体系，100多种饲料精选和配比，申请国家多项专利，智慧农场3.0用物联网IOT检测并干预和牛的成长。
             </p>
             <p>
-              实地集团坚持用户至上原则，关注每一个个体的真实需求。从项目规划之初，就从用户痛点出发，以科技创新的产品思维先行，借助智能产品、数据分析、生活配套三位一体的服务体系，
-              满足用户对居住环境安全、家庭健康、时间管理、情感交互等多维度的需求,以此为主线来逐步构建SLS
-              (Smart Life System)智慧人居系统，为用户打造美好生活体验的同时，
-              引领行业发展方向，提升城市整体的人居品质。
+              望和牛，与肉类加工领导者顶乐集团的战略合作，业内顶尖的屠宰，排酸，急冻，分割，精修等加工技术
             </p>
           </div>
         </div>
@@ -32,14 +27,14 @@
           <div class="footer-left">
             <div class="page-number">
               <span>01</span>
-              / 05
+              / 02
             </div>
           </div>
           <div class="footer-right">
             <div class="footer-frame">
               <div class="frame-left">
                 <div class="en">EXPLORE MORE</div>
-                <div class="cn">点击更多</div>
+                <div class="cn">了解更多</div>
               </div>
               <div class="frame-right">
                 <div class="arrow"></div>
@@ -66,86 +61,8 @@
       </swiper-slide>
       <swiper-slide class="swiper-item">
         <div class="item-left">
-          <div class="item-left-en">MILESTONES</div>
-          <div class="item-left-cn">里程碑</div>
-        </div>
-        <div class="item-right">
-          <div class="milestones-text">
-            <strong>萌芽，生长的开始..</strong>
-            <p>2006年,一股地产新兴势力在华南地区悄然崛起，实地集团正式成立。</p>
-            <strong>扎根，能量的注入</strong>
-            <p>
-              2006年，实地集团在中山启动第一个综合社区项目——实地•中山璟湖城。该项目获当地“最受欢迎楼盘”、“最具魅力园林社区”等奖项，为集团赢得良好开局及市场声誉。
-            </p>
-            <strong>生长，全面的发展</strong>
-            <p>
-              实地集团发展迅猛，一路高歌、不断壮大，陆续推出实地•遵义蔷薇国际、实地•六盘水紫藤庄园等高品质地产项目，实现以广州为总部，辐射周边省份的跨越式发展。
-            </p>
-            <strong>成熟，崭新的高度</strong>
-            <p>
-              2013年，实地集团发展日益成熟，战略触角延伸至华东等地区。实地•无锡玫瑰庄园等项目的落地标志着实地集团吹响进发中国东部房地产市场的号角，并向更高的目标迈进。
-            </p>
-            <strong>回归，荣耀的释放</strong>
-            <p>
-              2015年，实地集团回归一线城市。在广州筑造的百万方生活综合体——实地•广州常春藤项目，拉开了集团新一轮战略布局的序幕。2017年，实地进入第二个十年，旗下项目多点齐发，打开全国发展的新格局。
-            </p>
-            <strong>绽放，力量的迸发</strong>
-            <p>
-              2018年，实地集团加速拓展，新布局十余个中国潜力城市，并正式提出构建SLS（Smart
-              Life
-              System）智慧人居系统的战略设想，通过建立统一的云平台，与用户保持高频次的互动，不断迭代产品、优化服务，构建覆盖家居、社区、城市的智慧生活版图。
-            </p>
-          </div>
-        </div>
-        <div class="item-footer">
-          <div class="footer-left">
-            <div class="page-number">
-              <span>02</span>
-              / 05
-            </div>
-          </div>
-          <div class="footer-right">
-            <div class="footer-prev">
-              <div class="frame-next">
-                <div class="arrow"></div>
-                <div class="line"></div>
-                <div
-                  :class="'aboutplus-' + index"
-                  v-for="index in 4"
-                  :key="index"
-                >
-                  +
-                </div>
-              </div>
-            </div>
-            <div class="footer-frame next prev">
-              <div class="frame-next">
-                <div class="arrow"></div>
-                <div class="line"></div>
-                <div
-                  :class="'aboutplus-' + index"
-                  v-for="index in 4"
-                  :key="index"
-                >
-                  +
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="nav-bar">
-          <img
-            src="@/assets/menu.png"
-            class="head-logo"
-            @click="navLock = true"
-          />
-        </div>
-      </swiper-slide>
-      <swiper-slide class="swiper-item">
-        <div class="item-left">
-          <div class="item-left-en">BRAND CONNOTATION</div>
-          <div class="item-left-cn">品牌诠释</div>
+          <div class="item-left-en">HOW</div>
+          <div class="item-left-cn">如何煎好一块牛排</div>
         </div>
         <div class="item-right-brand">
           <video
@@ -156,20 +73,14 @@
             class="brand-video"
           ></video>
           <div class="brand-text">
-            <div class="brand-title">品牌诠释</div>
-            <div class="brand-line"></div>
-            <div class="brand-desc">
-              实地（Seedland0），寓意为土壤，实地一直奉行种子文化，认为生活就像是一颗种子，需要阳光、水分、土壤、空气的用心滋养，只有不断去灌溉培育，精心呵护，
-              才能让种子茁壮成长，生活才会变得更加美好幸福。不论是居住空间的创新与改造、高科技的社区智能集约，亦或是和谐人居的社区服务，实地致力于关注每一个个体的真实需求，
-              为未来全新的智慧人居生活提供完整舒适的体验服务。
-            </div>
+            <img src="@/assets/how-1.jpg">
           </div>
         </div>
         <div class="item-footer">
           <div class="footer-left">
             <div class="page-number">
-              <span>03</span>
-              / 05
+              <span>02</span>
+              / 02
             </div>
           </div>
           <div class="footer-right">
@@ -210,97 +121,7 @@
           />
         </div>
       </swiper-slide>
-      <swiper-slide class="swiper-item">
-        <div class="item-left">
-          <div class="item-left-en">PHILOSOPHY</div>
-          <div class="item-left-cn">实地理念</div>
-        </div>
-        <div class="item-right-ideal">
-          <div class="ideal-btn">
-            <div
-              :class="{ idealBtn: true, active: render }"
-              @click="render = true"
-            >
-              实地文化 [Culture]
-              <div
-                :class="'ideal-push-' + index"
-                v-for="index in 4"
-                :key="index"
-              >
-                +
-              </div>
-            </div>
-            <div
-              :class="{ idealBtn: true, active: !render }"
-              @click="render = false"
-            >
-              实地愿景 [Vision]
-              <div
-                :class="'ideal-push-' + index"
-                v-for="index in 4"
-                :key="index"
-              >
-                +
-              </div>
-            </div>
-          </div>
-          <div class="ideal-text" id="idealText">
-            <div class="text-left" v-for="item in textData" :key="item.title">
-              <div class="text-left-title">{{ item.title }}</div>
-              <div class="text-left-desc" v-html="item.text"></div>
-            </div>
-            <div class="text-right" v-for="item in blurData" :key="item.title">
-              <div class="text-left-title">{{ item.title }}</div>
-              <div class="text-left-desc" v-html="item.text"></div>
-            </div>
-          </div>
-        </div>
-        <div class="item-footer">
-          <div class="footer-left">
-            <div class="page-number">
-              <span>04</span>
-              / 05
-            </div>
-          </div>
-          <div class="footer-right">
-            <div class="footer-prev">
-              <div class="frame-next">
-                <div class="arrow"></div>
-                <div class="line"></div>
-                <div
-                  :class="'aboutplus-' + index"
-                  v-for="index in 4"
-                  :key="index"
-                >
-                  +
-                </div>
-              </div>
-            </div>
-            <div class="footer-frame next prev">
-              <div class="frame-next">
-                <div class="arrow"></div>
-                <div class="line"></div>
-                <div
-                  :class="'aboutplus-' + index"
-                  v-for="index in 4"
-                  :key="index"
-                >
-                  +
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="nav-bar">
-          <img
-            src="@/assets/menu.png"
-            class="head-logo"
-            @click="navLock = true"
-          />
-        </div>
-      </swiper-slide>
-      <swiper-slide class="swiper-item">
+      <!-- <swiper-slide class="swiper-item">
         <div class="item-left">
           <div class="item-left-en">GLORY</div>
           <div class="item-left-cn">实地荣誉</div>
@@ -403,7 +224,7 @@
             @click="navLock = true"
           />
         </div>
-      </swiper-slide>
+      </swiper-slide> -->
     </swiper>
     <sideNav v-if="navLock" @close="closeNav" />
   </div>
@@ -432,53 +253,12 @@ export default {
         }
       },
       render: true,
-      navLock: false,
-      idealText1: [
-        {
-          title: "万物向阳 实地生长",
-          text:
-            "<p>我们认为,生活就像是一颗种子，需要阳光、水分、土壤、空气的用心滋养，只有不断去灌溉培育，精心呵护，才能让种子茁壮成长，生活才会变得更加美好幸福。</p><p>实地集团将为孕育人们美好生活的种子提供养分与能量，扶植他们破土发芽，生根向阳，去向更美好的地方。</p>"
-        }
-      ],
-      idealText2: [
-        {
-          title: "打造美好人居生活体验",
-          text:
-            "<p>人类文明的繁衍传承来自于外在两大驱力的推动，即科技创新与人文关怀。二者互为促进，互为支撑。实地集团坚持用户至上原则，始终秉承初心，关注每一个个体的真实需求，锲而不舍的创新只为提升生活品质。勇者不囿于现状，而智者尤擅于超越。实地相信，唯有不拘传统、锐意进取、持续迭代，才能在未来人居体验的探索道路上，创造匠心铸就的精品。</p>"
-        }
-      ]
+      navLock: false
     };
   },
-  methods: {
+  methods:{
     closeNav(val) {
       this.navLock = val;
-    }
-  },
-  watch: {
-    render() {
-      let idealText = document.getElementById("idealText");
-      idealText.style.opacity = 0;
-      idealText.style.cssText += "transition:none";
-      setTimeout(() => {
-        idealText.style.cssText += "transition:opacity 500ms linear";
-        idealText.style.opacity = 1;
-      }, 500);
-    }
-  },
-  computed: {
-    textData() {
-      if (this.render) {
-        return this.idealText1;
-      } else {
-        return this.idealText2;
-      }
-    },
-    blurData() {
-      if (this.render) {
-        return this.idealText2;
-      } else {
-        return this.idealText1;
-      }
     }
   }
 };
@@ -539,19 +319,11 @@ export default {
           margin-top: 3%;
           width: 50vw;
           height: 30vh;
-          animation: fadeIn 500ms 3s linear forwards;
-          @keyframes fadeIn {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
           p {
             font-family: "NotoSansCJKsc-Thin", sans-serif;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 300;
+            line-height: 1.5;
             margin-bottom: 1em;
             letter-spacing: 1px;
           }
@@ -745,23 +517,9 @@ export default {
         }
         .brand-text {
           margin-left: 5%;
-          .brand-title {
-            font-family: "NotoSansCJKsc-Light", sans-serif;
-            font-size: 42px;
-            font-weight: 300;
-          }
-          .brand-line {
-            border-bottom: white 1px solid;
-            width: 100px;
-            margin: 20px 0px;
-          }
-          .brand-desc {
-            font-family: "NotoSansCJKsc-Thin", sans-serif;
-            font-size: 18px;
-            max-width: 100%;
-            position: relative;
-            line-height: 24px;
-            font-weight: 300;
+          img{
+            position: absolute;
+            height: 60vh;
           }
         }
       }

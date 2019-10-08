@@ -6,14 +6,10 @@
       />
     </div>
     <div class="video-bg" v-show="!imgLock">
-      <video
+      <img
         class="video-content"
-        id="video-bg"
-        muted="muted"
-        loop="loop"
-        autoplay="autoplay"
-        src="http://www.seedland.cc/assets/videos/videobg.mp4"
-      ></video>
+        src="@/assets/wang-bg.jpg"
+      >
     </div>
     <div v-if="!imgLock" class="home">
       <pcPage v-if="pc"/>
@@ -39,14 +35,7 @@ export default {
     mobilePage
   },
   mounted() {
-    let video = document.getElementById("video-bg");
-    video.addEventListener(
-      "canplaythrough",
-      () => {
-        this.imgLock = false;
-      },
-      false
-    ),
+    this.imgLock = false;
     window.addEventListener('pageshow',this.mobileFunc)
     window.addEventListener('resize',this.mobileFunc)
   },

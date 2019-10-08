@@ -9,6 +9,7 @@
     <div class="section"><aboutMobile /></div>
     <div class="section"><developmentMobile /></div>
     <div class="section"><newsMobile /></div>
+    <div class="section"><contactMobile /></div>
   </full-page>
 </template>
 
@@ -17,6 +18,7 @@ import bannerMobile from "@/components/bannerMobile.vue";
 import aboutMobile from "@/components/aboutMobile.vue";
 import developmentMobile from "@/components/developmentMobile.vue";
 import newsMobile from "@/components/newsMobile.vue";
+import contactMobile from "@/components/contactMobile.vue";
 
 export default {
   data(){
@@ -28,6 +30,7 @@ export default {
           "aboutMobile",
           "developmentMobile",
           "newsMobile",
+          "contactMobile"
         ]
       }
     }
@@ -36,7 +39,8 @@ export default {
     bannerMobile,
     aboutMobile,
     developmentMobile,
-    newsMobile
+    newsMobile,
+    contactMobile
   }
 }
 </script>

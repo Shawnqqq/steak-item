@@ -13,40 +13,33 @@
         <a class="nan-item" @click="goToSection('about')">
           02
           <p class="nav-item-text">
-            关于地产
+            关于汉和牛
             <span class="nav-item-en">ABOUT</span>
           </p>
         </a>
         <a class="nan-item" @click="goToSection('development')">
           03
           <p class="nav-item-text">
-            地产开发
+            商品欣赏
             <span class="nav-item-en">DEVELOPMENT</span>
           </p>
         </a>
-        <a class="nan-item" @click="goToSection('news')">
+        <a class="nan-item" @click="goToSection('story')">
           04
           <p class="nav-item-text">
-            最新消息
-            <span class="nav-item-en">LATEST NEWS</span>
+            产品故事
+            <span class="nav-item-en">STORY</span>
           </p>
         </a>
-        <a class="nan-item" @click="goToSection('join')">
+        <a class="nan-item" @click="goToSection('news')">
           05
           <p class="nav-item-text">
-            加入实地
-            <span class="nav-item-en">JOIN US</span>
-          </p>
-        </a>
-        <a class="nan-item" @click="goToSection('whistleblower')">
-          06
-          <p class="nav-item-text">
-            廉洁举报
-            <span class="nav-item-en">WHISTLEBLOWER</span>
+            物流售后
+            <span class="nav-item-en">LOGISTICS</span>
           </p>
         </a>
         <a class="nan-item" @click="goToSection('contact')">
-          07
+          06
           <p class="nav-item-text">
             联系我们
             <span class="nav-item-en">CONTACT</span>

@@ -1,20 +1,15 @@
 <template>
   <div class="container">
     <div class="head-section">
-      <img src="@/assets/logo.gif" class="head-logo" />
+      <img class="head-logo" src="@/assets/wanglogo.png">
       <div class="head-nav">
         <ul class="nav" id="nav-menu">
-          <a data-menuanchor="about" @click="goToSection('about')">关于实地</a>
+          <a data-menuanchor="about" @click="goToSection('about')">关于汉和牛</a>
           <a data-menuanchor="development" @click="goToSection('development')"
-            >地产开发</a
+            >商品欣赏</a
           >
-          <a data-menuanchor="news" @click="goToSection('news')">最新消息</a>
-          <a data-menuanchor="join" @click="goToSection('join')">加入实地</a>
-          <a
-            data-menuanchor="whistleblower"
-            @click="goToSection('whistleblower')"
-            >廉洁举报</a
-          >
+          <a data-menuanchor="story" @click="goToSection('story')">产品故事</a>
+          <a data-menuanchor="news" @click="goToSection('news')">物流售后</a>
           <a data-menuanchor="contact" @click="goToSection('contact')"
             >联系我们</a
           >
@@ -52,9 +47,9 @@
         <div class="vertical-7 vertical"></div>
       </div>
       <div class="body-title">
-        <div class="landing-title fadeTop">THE FUTURE</div>
-        <div class="landing-title fadeBottom">IS HERE</div>
-        <div class="ladding-subtitle">未来·就在眼前</div>
+        <div class="landing-title fadeTop">SPECIALTY</div>
+        <div class="landing-title fadeBottom">STORES</div>
+        <div class="ladding-subtitle">汉和牛专门店</div>
       </div>
       <div class="down-more">
         <div class="landing-textcn">向下滚动</div>
@@ -115,9 +110,9 @@ export default {
     align-items: center;
     justify-content: space-between;
     .head-logo {
-      width: 270px;
-      height: 20px;
-      margin-left: 60px;
+      width: 100px;
+      height: 100px;
+      margin-left: 80px;
     }
     .head-nav {
       display: flex;
@@ -443,7 +438,6 @@ export default {
         font-family: "Roboto", sans-serif;
         padding-bottom: 14px;
         display: inline-block;
-        border-bottom: 2px dashed #fff;
       }
     }
     .cross-box {

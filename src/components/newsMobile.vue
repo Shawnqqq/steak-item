@@ -4,8 +4,8 @@
       <div class="shadow">
       </div>
       <div class="brief-content">
-        <div class="title-cn">项目新闻</div>
-        <div class="title-en">news</div>
+        <div class="title-cn">产品故事</div>
+        <div class="title-en">STORY</div>
         <div class="tips">
           <div class="tips-en">SILDE RIGHT FOR MORE</div>
           <div class="tips-cn">向右滑动</div>

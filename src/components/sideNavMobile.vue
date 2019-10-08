@@ -1,5 +1,6 @@
 <template>
   <div class="side-nav">
+    <img class="header-menu" src="@/assets/menu.png" @click="navLock=true">
     <div class="nav-container">
       <img class="nav-image" src="@/assets/close.png" @click="lock" />
       <div class="nav-menu">
@@ -13,22 +14,29 @@
         <a class="nan-item" @click="goToSection('aboutMobile')">
           02
           <p class="nav-item-text">
-            项目简介
+            关于汉和牛
             <span class="nav-item-en">ABOUT</span>
           </p>
         </a>
         <a class="nan-item" @click="goToSection('developmentMobile')">
           03
           <p class="nav-item-text">
-            项目展示
+            商品欣赏
             <span class="nav-item-en">DEVELOPMENT</span>
           </p>
         </a>
         <a class="nan-item" @click="goToSection('newsMobile')">
           04
           <p class="nav-item-text">
-            项目新闻
-            <span class="nav-item-en">LATEST NEWS</span>
+            产品故事
+            <span class="nav-item-en">STORY</span>
+          </p>
+        </a>
+        <a class="nan-item" @click="goToSection('contactMobile')">
+          05
+          <p class="nav-item-text">
+            联系我们
+            <span class="nav-item-en">CONTACT</span>
           </p>
         </a>
       </div>
@@ -37,6 +45,7 @@
 </template>
 
 <script>
+
 export default {
   methods: {
     lock() {
@@ -45,7 +54,7 @@ export default {
     goToSection(section) {
       fullpage_api.moveTo(section);
       this.$emit("close", false);
-    }
+    },
   }
 };
 </script>
@@ -114,6 +123,13 @@ export default {
         }
       }
     }
+  }
+  .header-menu{
+    width: 25*@p;
+    height: 20*@p;
+    position: absolute;
+    top: 30*@p;
+    right: 30*@p;
   }
 }
 </style>

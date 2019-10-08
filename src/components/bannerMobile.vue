@@ -2,14 +2,14 @@
   <div class="container">
     <div class="header">
       <img class="header-menu" src="@/assets/menu.png" @click="navLock=true">
-      <img class="header-logo" src="@/assets/logo.gif">
+      <p class="header-logo">汉和牛专门店</p>
     </div>
     <div class="body">
       <div class="body-en">
-        THE FUTURE<br/>IS HERE
+        SPECIALTY<br/>STORES
       </div>
       <div class="body-cn">
-        未来·就在眼前
+        汉和牛专门店
       </div>
       <div class="body-down">
         <p class="donw-cn">向下滚动</p>
@@ -67,8 +67,9 @@ export default {
       left: 30*@p;
     }
     .header-logo{
-      width: 200*@p;
-      height: 16*@p;
+      font-size: 20*@p;
+      letter-spacing: 3*@p;
+      font-weight: 200;
       position: absolute;
       left: 50%;
       transform: translateX(-45%);
